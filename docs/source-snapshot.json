@@ -1,0 +1,1004 @@
+{
+  "snapshot": "R165",
+  "originalHostRepository": "Arkevo-Lab/mundi-web",
+  "originalBaseCommit": "bbe245e74fd36eff335967afd53e26fed1580e30",
+  "snapshotNature": "File snapshot including local uncommitted R165 changes. Original base is provenance, not a dependency; this repository has fresh history and runs independently.",
+  "sourceFiles": [
+    {
+      "path": "public/dropdown.css",
+      "sha256": "52ffb0f95d62711fef424a4fd86503021947a78ff04a737e7f6995bd8db7613d",
+      "bytes": 3115,
+      "exported_sha256": "52ffb0f95d62711fef424a4fd86503021947a78ff04a737e7f6995bd8db7613d",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "public/games/survivors-lab-0.61.0/src/animation.mjs",
+      "sha256": "4970002b753ac5089ba2b71c4f366c5adb81d6f39a792f3d92d1e8a728ce8c13",
+      "bytes": 2144,
+      "exported_sha256": "4970002b753ac5089ba2b71c4f366c5adb81d6f39a792f3d92d1e8a728ce8c13",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "public/games/survivors-lab-0.61.0/src/balance.mjs",
+      "sha256": "b0cb7afb57d0b5c0f3cdb9d12bebdf93259d18d39a1c560a0b86936221704929",
+      "bytes": 6060,
+      "exported_sha256": "b0cb7afb57d0b5c0f3cdb9d12bebdf93259d18d39a1c560a0b86936221704929",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "public/games/survivors-lab-0.61.0/src/combat.mjs",
+      "sha256": "d30bb6c0ea4ba4702ac26196913ff6a1e7dfac5c2b23719d284eb98d6dc57d76",
+      "bytes": 3729,
+      "exported_sha256": "d30bb6c0ea4ba4702ac26196913ff6a1e7dfac5c2b23719d284eb98d6dc57d76",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "public/games/survivors-lab-0.61.0/src/content-metadata.mjs",
+      "sha256": "600a6da00d3a466adfd0b853e83d71a21ebddaeac1aa7d248b28d4cd9f9397a8",
+      "bytes": 2706,
+      "exported_sha256": "600a6da00d3a466adfd0b853e83d71a21ebddaeac1aa7d248b28d4cd9f9397a8",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "public/games/survivors-lab-0.61.0/src/equipment-unlocks.mjs",
+      "sha256": "df955a553271ab06a6087329d01e693a6ca960ed48b47485b475c345b5a94c82",
+      "bytes": 5809,
+      "exported_sha256": "df955a553271ab06a6087329d01e693a6ca960ed48b47485b475c345b5a94c82",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "public/games/survivors-lab-0.61.0/src/feedback.mjs",
+      "sha256": "fc7eb321b803352ea73987451391cf81dda383cd93e4620c5e05848529aa9145",
+      "bytes": 9032,
+      "exported_sha256": "fc7eb321b803352ea73987451391cf81dda383cd93e4620c5e05848529aa9145",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "public/games/survivors-lab-0.61.0/src/gem-capacity.mjs",
+      "sha256": "de61e9fef882ffac951574c99d679a2705612f73eae4da5722c6166810bd87e7",
+      "bytes": 6774,
+      "exported_sha256": "de61e9fef882ffac951574c99d679a2705612f73eae4da5722c6166810bd87e7",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "public/games/survivors-lab-0.61.0/src/loot-table.mjs",
+      "sha256": "1c88811be3ea0744a601bf867992dbb1ba16a6c88ee2416f78861d5073ab3e0e",
+      "bytes": 1288,
+      "exported_sha256": "1c88811be3ea0744a601bf867992dbb1ba16a6c88ee2416f78861d5073ab3e0e",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "public/games/survivors-lab-0.61.0/src/nduja-scheduler.mjs",
+      "sha256": "9ddf7240b2e213127564c32e9ea4644ce7323c2d3741624ddb472d30201da677",
+      "bytes": 5598,
+      "exported_sha256": "9ddf7240b2e213127564c32e9ea4644ce7323c2d3741624ddb472d30201da677",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "public/games/survivors-lab-0.61.0/src/persistence.mjs",
+      "sha256": "8e6de4ba6edc20d45ad539980a68ca8606cdf5d4afc6afb8ae3d61fd194d9b9b",
+      "bytes": 13916,
+      "exported_sha256": "8e6de4ba6edc20d45ad539980a68ca8606cdf5d4afc6afb8ae3d61fd194d9b9b",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "public/games/survivors-lab-0.61.0/src/scene-material.mjs",
+      "sha256": "33fa97905dbce31f31a948d16342ff206b116b4dc1eca2db3ba487d244019502",
+      "bytes": 2401,
+      "exported_sha256": "33fa97905dbce31f31a948d16342ff206b116b4dc1eca2db3ba487d244019502",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "public/games/survivors-lab-0.61.0/src/sim.mjs",
+      "sha256": "31cd0c1d0c653b482e5a6dc34325350ef5510cd9c7b384df980602e320931b60",
+      "bytes": 208861,
+      "exported_sha256": "31cd0c1d0c653b482e5a6dc34325350ef5510cd9c7b384df980602e320931b60",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "public/games/survivors-lab-0.61.0/src/sprite-pixel-commands.mjs",
+      "sha256": "6d9ad37cd171b840eda22aa90b31f5070eb5493245d5cb664c6cfe652002bc66",
+      "bytes": 1488,
+      "exported_sha256": "6d9ad37cd171b840eda22aa90b31f5070eb5493245d5cb664c6cfe652002bc66",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "public/games/survivors-lab-0.61.0/src/sprite-prefilter-cache.mjs",
+      "sha256": "94b6ec7a8bf71d03b3e0743cd093b76ceee69eb325c00422e45612b5d692b497",
+      "bytes": 7116,
+      "exported_sha256": "94b6ec7a8bf71d03b3e0743cd093b76ceee69eb325c00422e45612b5d692b497",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "public/games/survivors-lab-0.61.0/src/sprite-raster-cache.mjs",
+      "sha256": "29ef202665b802d160721aea2c49c8df025047556b7ab0a1e5f97454596748f4",
+      "bytes": 6796,
+      "exported_sha256": "29ef202665b802d160721aea2c49c8df025047556b7ab0a1e5f97454596748f4",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "public/games/survivors-lab-0.61.0/src/sprite-sheet.mjs",
+      "sha256": "8e21dfafa074ebb6e65c21561dbf3a4fed95e7a1ac616ca8715c415a0a56bb99",
+      "bytes": 2149,
+      "exported_sha256": "8e21dfafa074ebb6e65c21561dbf3a4fed95e7a1ac616ca8715c415a0a56bb99",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "public/games/survivors-lab-0.61.0/src/sprites.mjs",
+      "sha256": "a4740a0b6bd9d1a98511c54141c680930bdf4408f631f949f96dae483bb27a90",
+      "bytes": 12432,
+      "exported_sha256": "a4740a0b6bd9d1a98511c54141c680930bdf4408f631f949f96dae483bb27a90",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "public/games/survivors-lab-0.61.0/src/stage.mjs",
+      "sha256": "ff7dff815ab6c9c5490a2cc49cae8a3b30573e2b31d91ac61726f0812aea7f75",
+      "bytes": 7330,
+      "exported_sha256": "ff7dff815ab6c9c5490a2cc49cae8a3b30573e2b31d91ac61726f0812aea7f75",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "public/games/survivors-lab-0.61.0/src/state-bounds.mjs",
+      "sha256": "26c1ab25e3293e11341e64a3aa20b46d96a4f732b2e4028c18835f9201384264",
+      "bytes": 6090,
+      "exported_sha256": "26c1ab25e3293e11341e64a3aa20b46d96a4f732b2e4028c18835f9201384264",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "public/games/survivors-lab-0.61.0/src/treasure-claim-contract.mjs",
+      "sha256": "54e67e9b0be97cff23b252313d1b4fbe834d7a8a4d318d5d3006686386904993",
+      "bytes": 1887,
+      "exported_sha256": "54e67e9b0be97cff23b252313d1b4fbe834d7a8a4d318d5d3006686386904993",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "public/games/survivors-lab-0.61.0/src/treasure.mjs",
+      "sha256": "3e489fae72a10cb2167079083b9fa500d8219273460bdfb57e1b3d5f4200dc50",
+      "bytes": 2037,
+      "exported_sha256": "3e489fae72a10cb2167079083b9fa500d8219273460bdfb57e1b3d5f4200dc50",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "public/games/survivors-lab-0.61.0/src/wave-pressure.mjs",
+      "sha256": "29769133f4ce7b61d1833b92166da2204357b160a85e38d5750492b18382e426",
+      "bytes": 1894,
+      "exported_sha256": "29769133f4ce7b61d1833b92166da2204357b160a85e38d5750492b18382e426",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "public/games/survivors-lab-research-v1/src/bat-crystal-bands.mjs",
+      "sha256": "0b6a809a2bffdace1417f33ac1cddf24ebe055961f9e48edec30fde6ef4c1e4c",
+      "bytes": 901,
+      "exported_sha256": "0b6a809a2bffdace1417f33ac1cddf24ebe055961f9e48edec30fde6ef4c1e4c",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "public/games/survivors-lab-research-v1/src/sim.mjs",
+      "sha256": "acaa176b61de58374e3a6d06f6dc5ffe1eaa1dddb56e7e70378f85034f9b025d",
+      "bytes": 215381,
+      "exported_sha256": "acaa176b61de58374e3a6d06f6dc5ffe1eaa1dddb56e7e70378f85034f9b025d",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "public/survivors-research.css",
+      "sha256": "3a4f5ba93a06b189e47add7dceabc49a7366278ed804c95d6e0afded654903ee",
+      "bytes": 8304,
+      "exported_sha256": "ab506b13eb61d3896d0575095a3893158a63bd1118309f7c6a5dfa0ad2fc98c4",
+      "modifiedForStandalone": true
+    },
+    {
+      "path": "public/survivors-research.html",
+      "sha256": "af76f0cfc1d3733c73b164525ede28f035b33505cb3977e22cc6b0b0a2a3bebc",
+      "bytes": 24382,
+      "exported_sha256": "dca89ce961fabfc8e433bd3605f225be3bbcba89646e758a5c5f3006811807e7",
+      "modifiedForStandalone": true
+    },
+    {
+      "path": "scripts/survivors-research/basic-movement-transport.mjs",
+      "sha256": "747b7fb342a4c90212e3bc92b1663ee32e67f4d3e972a4462420d536a4d6b564",
+      "bytes": 2596,
+      "exported_sha256": "747b7fb342a4c90212e3bc92b1663ee32e67f4d3e972a4462420d536a4d6b564",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "scripts/survivors-research/link-probe.mjs",
+      "sha256": "23c83324262fcaedd4c4d1b6011db75456e5c2c5b27e8fd9700843dfeaf15164",
+      "bytes": 2296,
+      "exported_sha256": "23c83324262fcaedd4c4d1b6011db75456e5c2c5b27e8fd9700843dfeaf15164",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "scripts/survivors-research/local-calibration.mjs",
+      "sha256": "f065b28d9c9fadd4acf090f00180923070d1a7fbe631a6e385b44df5e284438b",
+      "bytes": 1197,
+      "exported_sha256": "f065b28d9c9fadd4acf090f00180923070d1a7fbe631a6e385b44df5e284438b",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "scripts/survivors-research/native-decisions-transport.mjs",
+      "sha256": "43ef41a84d897efc213c67e4ac7e73a90768171cf22c09a7cdc6afaddf02bf4e",
+      "bytes": 4114,
+      "exported_sha256": "43ef41a84d897efc213c67e4ac7e73a90768171cf22c09a7cdc6afaddf02bf4e",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "scripts/survivors-research/path-prompt-protocol.mjs",
+      "sha256": "8a3f75af7d072a6dbd51ae3469fb12da0cb20113824fcb660865c870ee50d874",
+      "bytes": 2132,
+      "exported_sha256": "8a3f75af7d072a6dbd51ae3469fb12da0cb20113824fcb660865c870ee50d874",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "scripts/survivors-research/provider-clock-png.mjs",
+      "sha256": "4898d258b0be31057c292a0b8bd2b49997f00d9ccef972c225e0fbda040c761e",
+      "bytes": 7491,
+      "exported_sha256": "4898d258b0be31057c292a0b8bd2b49997f00d9ccef972c225e0fbda040c761e",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "scripts/survivors-research/whole-path-protocol.mjs",
+      "sha256": "e829c84b0d9c1aa1243b62bf8183d30e6708b15f514ba04b4ac0616ab8c54823",
+      "bytes": 3824,
+      "exported_sha256": "e829c84b0d9c1aa1243b62bf8183d30e6708b15f514ba04b4ac0616ab8c54823",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "scripts/survivors-research/whole-path-transport.mjs",
+      "sha256": "911c0157d22a8fc0dcfbc0ed5c97fb928ca9494dfa9201be63e8dbc5f45ba6ac",
+      "bytes": 1757,
+      "exported_sha256": "911c0157d22a8fc0dcfbc0ed5c97fb928ca9494dfa9201be63e8dbc5f45ba6ac",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "src/client/account-data.js",
+      "sha256": "f5171bd1057a74840f2e941745bf3427f0cf7cd1720cb91d9db891a66e0c2e3d",
+      "bytes": 2122,
+      "exported_sha256": "f5171bd1057a74840f2e941745bf3427f0cf7cd1720cb91d9db891a66e0c2e3d",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "src/client/cache-scope.js",
+      "sha256": "c069531df62bd7c76230bf26dc00246ab4c265acb710205821bb3f9147573441",
+      "bytes": 1241,
+      "exported_sha256": "c069531df62bd7c76230bf26dc00246ab4c265acb710205821bb3f9147573441",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "src/client/local-video.js",
+      "sha256": "cab38eacb10d3c948aeb14ce1c3b388b578458effffc561fbf4a1c5f53af86ab",
+      "bytes": 7312,
+      "exported_sha256": "cab38eacb10d3c948aeb14ce1c3b388b578458effffc561fbf4a1c5f53af86ab",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "src/client/recording-surface.js",
+      "sha256": "b63ea29b5af2c0fc63b09065cc7a947b20a3866ffecdc00e9d165c52ec117496",
+      "bytes": 2019,
+      "exported_sha256": "b63ea29b5af2c0fc63b09065cc7a947b20a3866ffecdc00e9d165c52ec117496",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "src/client/select-dropdown.js",
+      "sha256": "2fdb7a6d90dd537747bd46cae726f220374b86e5cd07e23f232910f373d3415e",
+      "bytes": 10473,
+      "exported_sha256": "2fdb7a6d90dd537747bd46cae726f220374b86e5cd07e23f232910f373d3415e",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "src/client/survivors-research/advisor-memory.js",
+      "sha256": "a4db2b1a4e59f96541c83bdb039784fe7f6002a83ac2b18d866f79f5571d0c07",
+      "bytes": 13035,
+      "exported_sha256": "a4db2b1a4e59f96541c83bdb039784fe7f6002a83ac2b18d866f79f5571d0c07",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "src/client/survivors-research/agent-loop.js",
+      "sha256": "0b2e9698d63651fca4d2057872a2225c806583736a70041c833e41c9cd040cdb",
+      "bytes": 22925,
+      "exported_sha256": "0b2e9698d63651fca4d2057872a2225c806583736a70041c833e41c9cd040cdb",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "src/client/survivors-research/evidence.js",
+      "sha256": "1cda8e153a9dc94bc5e646cad0b10f0294011f85be0d71ee185acac75426bf00",
+      "bytes": 6500,
+      "exported_sha256": "1cda8e153a9dc94bc5e646cad0b10f0294011f85be0d71ee185acac75426bf00",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "src/client/survivors-research/experiment.js",
+      "sha256": "11c14e89ce977ef08a1f232e6fd56242513f93cd2557f2217595c67da03293b3",
+      "bytes": 23260,
+      "exported_sha256": "11c14e89ce977ef08a1f232e6fd56242513f93cd2557f2217595c67da03293b3",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "src/client/survivors-research/human-control.js",
+      "sha256": "49565667f4fbddb41281b52f4e9641d02f3d61a52a08fbb7005b9c7a2d79a6eb",
+      "bytes": 3569,
+      "exported_sha256": "49565667f4fbddb41281b52f4e9641d02f3d61a52a08fbb7005b9c7a2d79a6eb",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "src/client/survivors-research/information-presets.js",
+      "sha256": "476b1571825439a5d9ae12305689cfb248c67a0729f43693308b6d074018098b",
+      "bytes": 3640,
+      "exported_sha256": "476b1571825439a5d9ae12305689cfb248c67a0729f43693308b6d074018098b",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "src/client/survivors-research/link-calibration-import.js",
+      "sha256": "a5f3a6429376e7d63b3a9d9005d209f0224183b240497d869d5d6ddb8353cb2c",
+      "bytes": 1585,
+      "exported_sha256": "a5f3a6429376e7d63b3a9d9005d209f0224183b240497d869d5d6ddb8353cb2c",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "src/client/survivors-research/main.js",
+      "sha256": "c8cbe8d5d1bedf28bd14b72d089f363f7c586e461f8ff9e48e41eb4498c92b78",
+      "bytes": 107544,
+      "exported_sha256": "c8cbe8d5d1bedf28bd14b72d089f363f7c586e461f8ff9e48e41eb4498c92b78",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "src/client/survivors-research/micro-visual-render.js",
+      "sha256": "6ef0bbdee49b9c5fe25ddb5de35cd11c4aa0d71aa912f0f3661b3f202187e97c",
+      "bytes": 4610,
+      "exported_sha256": "6ef0bbdee49b9c5fe25ddb5de35cd11c4aa0d71aa912f0f3661b3f202187e97c",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "src/client/survivors-research/models/action-advisor.js",
+      "sha256": "50d952041f79df68f05bab717c63a63647ba0b8f76ed4cbc19d38e27ceb1bf47",
+      "bytes": 8866,
+      "exported_sha256": "50d952041f79df68f05bab717c63a63647ba0b8f76ed4cbc19d38e27ceb1bf47",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "src/client/survivors-research/models/action-cardinal.js",
+      "sha256": "44a3cc7d0d242f16e7fc89b65ec6886b9491625c8505626c28b0f65b28e0f6b4",
+      "bytes": 8790,
+      "exported_sha256": "44a3cc7d0d242f16e7fc89b65ec6886b9491625c8505626c28b0f65b28e0f6b4",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "src/client/survivors-research/models/action-direction.js",
+      "sha256": "cb197b06acf4031ee4bdf2f5d271b116c523672fa2a99197a5bf5bf0c55c2c76",
+      "bytes": 3004,
+      "exported_sha256": "cb197b06acf4031ee4bdf2f5d271b116c523672fa2a99197a5bf5bf0c55c2c76",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "src/client/survivors-research/models/action-goal.js",
+      "sha256": "c6693cfdceb372da6996ce3966415c772508ccaaa025fe0d8c076a79eca33f53",
+      "bytes": 7531,
+      "exported_sha256": "c6693cfdceb372da6996ce3966415c772508ccaaa025fe0d8c076a79eca33f53",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "src/client/survivors-research/models/action-observation.js",
+      "sha256": "bba4f978726f565518d0d8c3a3489edf31b4a88a09c74905c6f1fd6998831b31",
+      "bytes": 10962,
+      "exported_sha256": "bba4f978726f565518d0d8c3a3489edf31b4a88a09c74905c6f1fd6998831b31",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "src/client/survivors-research/models/action-prompt.js",
+      "sha256": "48f5a59c3cbfef4b704bb3735ebdec26f537d455dcaccafb0a631850a1812406",
+      "bytes": 5466,
+      "exported_sha256": "48f5a59c3cbfef4b704bb3735ebdec26f537d455dcaccafb0a631850a1812406",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "src/client/survivors-research/models/action-sequence.js",
+      "sha256": "4facc592361e3ee0c38842e0755ae2fdcf7bdebdbd39d94be5aaf248f9b936af",
+      "bytes": 1385,
+      "exported_sha256": "4facc592361e3ee0c38842e0755ae2fdcf7bdebdbd39d94be5aaf248f9b936af",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "src/client/survivors-research/models/action-slots.js",
+      "sha256": "134f5abd26250f82e26a1ad618df80e9265c4f7367a4c6c0487a884862a08f95",
+      "bytes": 6417,
+      "exported_sha256": "134f5abd26250f82e26a1ad618df80e9265c4f7367a4c6c0487a884862a08f95",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "src/client/survivors-research/models/action-strategy.js",
+      "sha256": "a947f55b6f899d8098a8c98d6e54990a12c58d99bf509f05206f19b7c76052f6",
+      "bytes": 9368,
+      "exported_sha256": "a947f55b6f899d8098a8c98d6e54990a12c58d99bf509f05206f19b7c76052f6",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "src/client/survivors-research/models/action-whole-path.js",
+      "sha256": "ee49e7705bb9ddc12c4853d73772909b6c86c780867b79b66a5e1035c05c71dc",
+      "bytes": 4537,
+      "exported_sha256": "ee49e7705bb9ddc12c4853d73772909b6c86c780867b79b66a5e1035c05c71dc",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "src/client/survivors-research/models/advisor-scheduler.js",
+      "sha256": "6fd7ff889432841de07abde8d1110a52df887b0975edbdffc15aceb2181f3180",
+      "bytes": 8567,
+      "exported_sha256": "6fd7ff889432841de07abde8d1110a52df887b0975edbdffc15aceb2181f3180",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "src/client/survivors-research/models/candidate-score.js",
+      "sha256": "42e84a19bd90a36ad0c2c06b1e1f88e48391958bd7a102f62432b57e44f9725b",
+      "bytes": 2296,
+      "exported_sha256": "42e84a19bd90a36ad0c2c06b1e1f88e48391958bd7a102f62432b57e44f9725b",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "src/client/survivors-research/models/combat-context.js",
+      "sha256": "2b04765ff623dc952918de572c5ad552a5914bb906fccc92078e9cbf378f7138",
+      "bytes": 4051,
+      "exported_sha256": "2b04765ff623dc952918de572c5ad552a5914bb906fccc92078e9cbf378f7138",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "src/client/survivors-research/models/common.js",
+      "sha256": "8294908e634c260a08a772f2936bf61389de4be0e10c7c007f7bf04bb3113883",
+      "bytes": 5902,
+      "exported_sha256": "8294908e634c260a08a772f2936bf61389de4be0e10c7c007f7bf04bb3113883",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "src/client/survivors-research/models/compensation.js",
+      "sha256": "765b64200d399f1b40e9afdc61100ad94873e681b9f56e1412e5700e23f4fca5",
+      "bytes": 5475,
+      "exported_sha256": "765b64200d399f1b40e9afdc61100ad94873e681b9f56e1412e5700e23f4fca5",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "src/client/survivors-research/models/control-brief.js",
+      "sha256": "fa9fb6d42c03855233f3d2fb20dfd3d02c89404ee885ba97d7b62dbb476c36a1",
+      "bytes": 1911,
+      "exported_sha256": "fa9fb6d42c03855233f3d2fb20dfd3d02c89404ee885ba97d7b62dbb476c36a1",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "src/client/survivors-research/models/decision-timing.js",
+      "sha256": "6240cbd28561a4f079f0d224059b76a16a78b274ac2df4fd1891ec8513e3dbaf",
+      "bytes": 4739,
+      "exported_sha256": "6240cbd28561a4f079f0d224059b76a16a78b274ac2df4fd1891ec8513e3dbaf",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "src/client/survivors-research/models/decisions.js",
+      "sha256": "697ca72e8c631db495b6e20e0f0ce582b670446c4e21ae928810d14b5f9a47a1",
+      "bytes": 50469,
+      "exported_sha256": "697ca72e8c631db495b6e20e0f0ce582b670446c4e21ae928810d14b5f9a47a1",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "src/client/survivors-research/models/directional.js",
+      "sha256": "b0c5316648681a24294bb2f657480e74e600bbaff2118dfa5c4dffe65b70743b",
+      "bytes": 6567,
+      "exported_sha256": "b0c5316648681a24294bb2f657480e74e600bbaff2118dfa5c4dffe65b70743b",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "src/client/survivors-research/models/generative.js",
+      "sha256": "7275e2be1d35b533d5b5f930e15f2c95bfc21c5a2f216696079938e0fb2857af",
+      "bytes": 2689,
+      "exported_sha256": "7275e2be1d35b533d5b5f930e15f2c95bfc21c5a2f216696079938e0fb2857af",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "src/client/survivors-research/models/index.js",
+      "sha256": "6ebc74b58205480d17d9b3c8d519a01358545b26723b9adfc18a4967614d4fce",
+      "bytes": 795,
+      "exported_sha256": "6ebc74b58205480d17d9b3c8d519a01358545b26723b9adfc18a4967614d4fce",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "src/client/survivors-research/models/iterated-whole-path.js",
+      "sha256": "ec470cee3821d088f1d163400a7de37bf1167f290925094e1cd4dcdda778c57c",
+      "bytes": 6559,
+      "exported_sha256": "ec470cee3821d088f1d163400a7de37bf1167f290925094e1cd4dcdda778c57c",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "src/client/survivors-research/models/joint-generated-plan.js",
+      "sha256": "106786de89de999fc9f167224319e85a81ab03c71a27b81f98a6c3b752f4b9fe",
+      "bytes": 3745,
+      "exported_sha256": "106786de89de999fc9f167224319e85a81ab03c71a27b81f98a6c3b752f4b9fe",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "src/client/survivors-research/models/local-micro.js",
+      "sha256": "77152d96e99370a51093e708310b1e28ce7a234fc8bed79466e557baf399afb4",
+      "bytes": 12107,
+      "exported_sha256": "77152d96e99370a51093e708310b1e28ce7a234fc8bed79466e557baf399afb4",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "src/client/survivors-research/models/local-path-micro.js",
+      "sha256": "1b0e1580cb21669b3a0f7cffec42b70c6441ece3e2c1685a3246176f9cdc7679",
+      "bytes": 24050,
+      "exported_sha256": "1b0e1580cb21669b3a0f7cffec42b70c6441ece3e2c1685a3246176f9cdc7679",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "src/client/survivors-research/models/mock.js",
+      "sha256": "54170f6631746a2bfba422bc610eab3b4ebb7d16330b7d0895da5d56e48d7d0b",
+      "bytes": 4009,
+      "exported_sha256": "54170f6631746a2bfba422bc610eab3b4ebb7d16330b7d0895da5d56e48d7d0b",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "src/client/survivors-research/models/nace-decisions.js",
+      "sha256": "82769208eaa46a062cfdff80238bb49b9e0c3dbefc2afbf8e1fd58d0fa1f2179",
+      "bytes": 4547,
+      "exported_sha256": "82769208eaa46a062cfdff80238bb49b9e0c3dbefc2afbf8e1fd58d0fa1f2179",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "src/client/survivors-research/models/node-context.js",
+      "sha256": "ca06eec9059d123f94b912b61be9ae772d23b4cb911563c224f694a7999dffc4",
+      "bytes": 10259,
+      "exported_sha256": "ca06eec9059d123f94b912b61be9ae772d23b4cb911563c224f694a7999dffc4",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "src/client/survivors-research/models/provider-http.js",
+      "sha256": "6d1c46ffa0e0840002ae10877253ead89b41c5b013a14a7270c3d929c1623c96",
+      "bytes": 4098,
+      "exported_sha256": "6d1c46ffa0e0840002ae10877253ead89b41c5b013a14a7270c3d929c1623c96",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "src/client/survivors-research/models/r160-prompts.js",
+      "sha256": "1ca0159a521cd8b5108c4675ab47bdac5b292cf61080f323ab1f44fd1a38060c",
+      "bytes": 11741,
+      "exported_sha256": "1ca0159a521cd8b5108c4675ab47bdac5b292cf61080f323ab1f44fd1a38060c",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "src/client/survivors-research/models/r162-prompts.js",
+      "sha256": "d0bcd2cf8e0609fcaaac61f2223adba0c69899e6799d9a9cb8a87784b02a4201",
+      "bytes": 13416,
+      "exported_sha256": "d0bcd2cf8e0609fcaaac61f2223adba0c69899e6799d9a9cb8a87784b02a4201",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "src/client/survivors-research/models/r162-shared-facts.js",
+      "sha256": "05920673a3d690b38b6ac12a69030915432d5ac32441c3a93e16d266710c9389",
+      "bytes": 3584,
+      "exported_sha256": "05920673a3d690b38b6ac12a69030915432d5ac32441c3a93e16d266710c9389",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "src/client/survivors-research/models/r165-prompts.js",
+      "sha256": "2d7f8119ae52776d88f617997d4613eae19216bc2769613f631e4252e2bb13f7",
+      "bytes": 17866,
+      "exported_sha256": "2d7f8119ae52776d88f617997d4613eae19216bc2769613f631e4252e2bb13f7",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "src/client/survivors-research/models/r165-shared-facts.js",
+      "sha256": "7febb4c9222f044f249dffd93193e895283a8e695927dde1ba84f89a8a258188",
+      "bytes": 916,
+      "exported_sha256": "7febb4c9222f044f249dffd93193e895283a8e695927dde1ba84f89a8a258188",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "src/client/survivors-research/models/strategy-config.js",
+      "sha256": "ca1794276d83f6bb8055978b38806a6d35b3d221d242c43184ad4f2564f0ab78",
+      "bytes": 565,
+      "exported_sha256": "ca1794276d83f6bb8055978b38806a6d35b3d221d242c43184ad4f2564f0ab78",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "src/client/survivors-research/models/strategy-memory.js",
+      "sha256": "10a7e3f35a97e62e50cf0e6daf754ff40161564b2c46697027fde95bc2cde83c",
+      "bytes": 4323,
+      "exported_sha256": "10a7e3f35a97e62e50cf0e6daf754ff40161564b2c46697027fde95bc2cde83c",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "src/client/survivors-research/models/strategy-scheduler.js",
+      "sha256": "0bd3a1841c6c9bf76ac8c5198e0363345992aec2fa9fc83c28a956408d51d0da",
+      "bytes": 5272,
+      "exported_sha256": "0bd3a1841c6c9bf76ac8c5198e0363345992aec2fa9fc83c28a956408d51d0da",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "src/client/survivors-research/models/strategy.js",
+      "sha256": "842768c0c490190be116e4bd588cc2c24cb14c5e62d606edaea09165ccf2d038",
+      "bytes": 4900,
+      "exported_sha256": "842768c0c490190be116e4bd588cc2c24cb14c5e62d606edaea09165ccf2d038",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "src/client/survivors-research/models/visual-input.js",
+      "sha256": "19cc69f1364afbc59081d01eafb78473b06fde961f6305506aeea9e4836b48c4",
+      "bytes": 6018,
+      "exported_sha256": "19cc69f1364afbc59081d01eafb78473b06fde961f6305506aeea9e4836b48c4",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "src/client/survivors-research/models/whip-knowledge.js",
+      "sha256": "c687df6414b808d61bfea093179efd8ff60fc9dd5798567e5ddf448b93f7e7b7",
+      "bytes": 822,
+      "exported_sha256": "c687df6414b808d61bfea093179efd8ff60fc9dd5798567e5ddf448b93f7e7b7",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "src/client/survivors-research/playtest-preset.js",
+      "sha256": "df3f149b2ae8553131343e0abb06eb39c64399b885d7aefe03a52c21c37e2266",
+      "bytes": 1706,
+      "exported_sha256": "df3f149b2ae8553131343e0abb06eb39c64399b885d7aefe03a52c21c37e2266",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "src/client/survivors-research/provider-clock.js",
+      "sha256": "61de8ff4130549b6ad0aa118858dd6ce17009be6e1b42e46a05961e1e06c55da",
+      "bytes": 10615,
+      "exported_sha256": "61de8ff4130549b6ad0aa118858dd6ce17009be6e1b42e46a05961e1e06c55da",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "src/client/survivors-research/provider-execution-window.js",
+      "sha256": "7be5c4f8510b2dde8b7f9531366fa9b4ca93951e5fbe5a73a6841e75ec08419a",
+      "bytes": 8703,
+      "exported_sha256": "7be5c4f8510b2dde8b7f9531366fa9b4ca93951e5fbe5a73a6841e75ec08419a",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "src/client/survivors-research/render.js",
+      "sha256": "d3a4e433de83b00ee192f9e47aab8e21dc4dc9b251f9483e84a509fb61fd78c6",
+      "bytes": 7154,
+      "exported_sha256": "d3a4e433de83b00ee192f9e47aab8e21dc4dc9b251f9483e84a509fb61fd78c6",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "src/client/survivors-research/report.js",
+      "sha256": "4426c9652ea12fe70b349480f17e69e92701dc68b04a8756ac2790fce12e9a70",
+      "bytes": 41223,
+      "exported_sha256": "4426c9652ea12fe70b349480f17e69e92701dc68b04a8756ac2790fce12e9a70",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "src/client/survivors-research/response-sample.js",
+      "sha256": "31028aee46922b4af9fadeb8918786f3ce461a6ee4c70ab62023e40844dc9437",
+      "bytes": 5759,
+      "exported_sha256": "31028aee46922b4af9fadeb8918786f3ce461a6ee4c70ab62023e40844dc9437",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "src/client/survivors-research/resume-node.js",
+      "sha256": "15cf9d98d3c311e50f339aaf4d4287ec0ce0a304ad0db5d0984ea7353c3d4203",
+      "bytes": 8989,
+      "exported_sha256": "15cf9d98d3c311e50f339aaf4d4287ec0ce0a304ad0db5d0984ea7353c3d4203",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "src/client/survivors-research/sim-observation.js",
+      "sha256": "add7feeed50c0525b6ba5bef23b3015620f1eff447c23e57464a641f293f10f5",
+      "bytes": 12676,
+      "exported_sha256": "add7feeed50c0525b6ba5bef23b3015620f1eff447c23e57464a641f293f10f5",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "src/client/survivors-research/sim-replay.js",
+      "sha256": "3061677cf4b1440b3a0768afcf494a47ea379a26fe8b9b5fb53180d02ecf7722",
+      "bytes": 8436,
+      "exported_sha256": "3061677cf4b1440b3a0768afcf494a47ea379a26fe8b9b5fb53180d02ecf7722",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "src/client/survivors-research/sim-run.js",
+      "sha256": "919b5b1917ba1d162de56525a3e37890d09e08f9ba459cba83f8664f56c1cd31",
+      "bytes": 27968,
+      "exported_sha256": "919b5b1917ba1d162de56525a3e37890d09e08f9ba459cba83f8664f56c1cd31",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "src/client/survivors-research/sim-state-hash.js",
+      "sha256": "9a34a959386e9859717ff0380c70b00fe31d622c3314ec204e55107149051d8d",
+      "bytes": 692,
+      "exported_sha256": "9a34a959386e9859717ff0380c70b00fe31d622c3314ec204e55107149051d8d",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "src/client/survivors-research/sim-visual-frame.js",
+      "sha256": "71a25ba25fedc1682010113607619dccccc27d821a89f9e8a48769f6dab80cee",
+      "bytes": 5205,
+      "exported_sha256": "71a25ba25fedc1682010113607619dccccc27d821a89f9e8a48769f6dab80cee",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "src/client/survivors-research/sim-world.js",
+      "sha256": "9c3f9f73acb579cbfb753db4db720ffb7d1738274c57c33e68efd8aea330f2da",
+      "bytes": 29719,
+      "exported_sha256": "9c3f9f73acb579cbfb753db4db720ffb7d1738274c57c33e68efd8aea330f2da",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "src/client/survivors-research/simulation.worker.js",
+      "sha256": "5e7bcd7dc9dfe5ad059291722130415303b9e8239592c65d42415baa7ada1592",
+      "bytes": 6138,
+      "exported_sha256": "5e7bcd7dc9dfe5ad059291722130415303b9e8239592c65d42415baa7ada1592",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "src/client/survivors-research/timing-report.js",
+      "sha256": "3433c9da327bfc3260ddd47082cdce3874d3d329dec9f128e23e6cb4da904d2b",
+      "bytes": 6239,
+      "exported_sha256": "3433c9da327bfc3260ddd47082cdce3874d3d329dec9f128e23e6cb4da904d2b",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "src/client/survivors-research/training-goal-memory.js",
+      "sha256": "a776fbac00ffe431ba1727062ac3125b55f71460f72b86027c937a2ce30351d7",
+      "bytes": 3295,
+      "exported_sha256": "a776fbac00ffe431ba1727062ac3125b55f71460f72b86027c937a2ce30351d7",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "src/client/survivors-research/training-tactics.js",
+      "sha256": "30da1ad68cc33136caef261f920523cfd82e182bcac99ee690b86835e3730cc0",
+      "bytes": 2650,
+      "exported_sha256": "30da1ad68cc33136caef261f920523cfd82e182bcac99ee690b86835e3730cc0",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "src/client/survivors-research/trajectory-render.js",
+      "sha256": "80bd7afa4b95b7eb6ea30d31a201a72c6f2e1bfd2da6c1dce42fb8793d507b43",
+      "bytes": 5930,
+      "exported_sha256": "80bd7afa4b95b7eb6ea30d31a201a72c6f2e1bfd2da6c1dce42fb8793d507b43",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "src/client/survivors-research/visual-example.js",
+      "sha256": "af86dd477000688977ce07f5bf8893f4a78ddb464bf817badd97e4a171643b84",
+      "bytes": 1816,
+      "exported_sha256": "af86dd477000688977ce07f5bf8893f4a78ddb464bf817badd97e4a171643b84",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "src/client/survivors-research/visual-render.js",
+      "sha256": "f71ff48ecaf7c559d43fc50cd53acd96cf63914c6648894296bcef9b7535d7e9",
+      "bytes": 11065,
+      "exported_sha256": "f71ff48ecaf7c559d43fc50cd53acd96cf63914c6648894296bcef9b7535d7e9",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "src/client/survivors-research/worker-client.js",
+      "sha256": "ff11861acafdc1c126076d05e65a927babf85d17ecdeb2c082992681176464ec",
+      "bytes": 2754,
+      "exported_sha256": "ff11861acafdc1c126076d05e65a927babf85d17ecdeb2c082992681176464ec",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "src/server/survivors-research-model.js",
+      "sha256": "30ef1eff8472ec4aa47ba87fb3c1434a5237964032fae4e00839ca1e4d8ca4e9",
+      "bytes": 38245,
+      "exported_sha256": "30ef1eff8472ec4aa47ba87fb3c1434a5237964032fae4e00839ca1e4d8ca4e9",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "src/server/survivors-research-strategy.js",
+      "sha256": "e99312693e3c2ab1ed77cc06da2cec3df44d28669fb4182ce6f30fae95a3e8cb",
+      "bytes": 6557,
+      "exported_sha256": "e99312693e3c2ab1ed77cc06da2cec3df44d28669fb4182ce6f30fae95a3e8cb",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "src/shared/survivors-research-contract.js",
+      "sha256": "6cad04086c2c4610dbdabd4b59616b2a733123557634cc998457d41a91b6ed42",
+      "bytes": 8084,
+      "exported_sha256": "6cad04086c2c4610dbdabd4b59616b2a733123557634cc998457d41a91b6ed42",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "tests/survivors-research-advisor-memory.test.mjs",
+      "sha256": "e6d1c67baf67b6153fc2e4ce1e7f645278ce22b05d516672f8358c542b60274b",
+      "bytes": 13542,
+      "exported_sha256": "e6d1c67baf67b6153fc2e4ce1e7f645278ce22b05d516672f8358c542b60274b",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "tests/survivors-research-advisor-model.test.mjs",
+      "sha256": "69d1369f951029baa51067504f652b2cc4dbddf01200d505095f5567084ecb61",
+      "bytes": 19009,
+      "exported_sha256": "69d1369f951029baa51067504f652b2cc4dbddf01200d505095f5567084ecb61",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "tests/survivors-research-basic-movement-transport.test.mjs",
+      "sha256": "e8e5730c4c39ffcf6701ed4ae055f5e7794f300c4dbef9f78537a33eefc2dd70",
+      "bytes": 3057,
+      "exported_sha256": "e8e5730c4c39ffcf6701ed4ae055f5e7794f300c4dbef9f78537a33eefc2dd70",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "tests/survivors-research-bat-crystal-bands.test.mjs",
+      "sha256": "e30c00656495e6a314f12e8a8bf9ae508f6084141f546ac912ab771dfc9e20a4",
+      "bytes": 7391,
+      "exported_sha256": "e30c00656495e6a314f12e8a8bf9ae508f6084141f546ac912ab771dfc9e20a4",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "tests/survivors-research-combat-context.test.mjs",
+      "sha256": "d906be6ade36e129e436305c7c2123601d544fd76ef4fcff8b8a187220f28bfa",
+      "bytes": 5474,
+      "exported_sha256": "d906be6ade36e129e436305c7c2123601d544fd76ef4fcff8b8a187220f28bfa",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "tests/survivors-research-comp-model.test.mjs",
+      "sha256": "826155b06515c7f9c035aef072669cb60c276073859f3edbec01857d683074fc",
+      "bytes": 7534,
+      "exported_sha256": "826155b06515c7f9c035aef072669cb60c276073859f3edbec01857d683074fc",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "tests/survivors-research-control-brief.test.mjs",
+      "sha256": "c29b070a0776c770f5999e3a1b97f5ba36e605927546b0ff0d494153f4e71c2d",
+      "bytes": 6288,
+      "exported_sha256": "c29b070a0776c770f5999e3a1b97f5ba36e605927546b0ff0d494153f4e71c2d",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "tests/survivors-research-decision-timing.test.mjs",
+      "sha256": "eb4a6198b4b28a5c6f1e0eb2539ecb7b211b7520ee16329be5c3c53a3a28ed86",
+      "bytes": 7979,
+      "exported_sha256": "eb4a6198b4b28a5c6f1e0eb2539ecb7b211b7520ee16329be5c3c53a3a28ed86",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "tests/survivors-research-goal-memory.test.mjs",
+      "sha256": "30dcbefdd2e6c08262f8cf5f08766f070aea5d4d07ec06f135e37bc50674f758",
+      "bytes": 4824,
+      "exported_sha256": "30dcbefdd2e6c08262f8cf5f08766f070aea5d4d07ec06f135e37bc50674f758",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "tests/survivors-research-local-micro-visual.test.mjs",
+      "sha256": "10840c62c6dacdcc1bb65ea1dca503d08a419227faa6e977d542c66c921869d3",
+      "bytes": 1975,
+      "exported_sha256": "10840c62c6dacdcc1bb65ea1dca503d08a419227faa6e977d542c66c921869d3",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "tests/survivors-research-micro-time-context.test.mjs",
+      "sha256": "b38834a3bbfee0f164c7185105d8b91b97d24af6361f4875f65a431eb3829ab9",
+      "bytes": 14874,
+      "exported_sha256": "b38834a3bbfee0f164c7185105d8b91b97d24af6361f4875f65a431eb3829ab9",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "tests/survivors-research-node-archive.test.mjs",
+      "sha256": "821db1208f74df0f8197eef1a0b3c033f5a050ffb2cf2fbfa5c3145b83e3cdcb",
+      "bytes": 4186,
+      "exported_sha256": "821db1208f74df0f8197eef1a0b3c033f5a050ffb2cf2fbfa5c3145b83e3cdcb",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "tests/survivors-research-node-context.test.mjs",
+      "sha256": "bf27c23cc0ed560bf8790f501318fd0646d00a1612335d9bdaba424651773608",
+      "bytes": 4904,
+      "exported_sha256": "bf27c23cc0ed560bf8790f501318fd0646d00a1612335d9bdaba424651773608",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "tests/survivors-research-node-resume.test.mjs",
+      "sha256": "ce66694a7828b3eb14995e6fe690c4e602691ae0c898779c86cc7bd4c4fffa0f",
+      "bytes": 9753,
+      "exported_sha256": "ce66694a7828b3eb14995e6fe690c4e602691ae0c898779c86cc7bd4c4fffa0f",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "tests/survivors-research-path-prompt.test.mjs",
+      "sha256": "f35dfa26992c962dd16739a3783f731c1a3cc89c0b09b9e61652e63c9b6d450f",
+      "bytes": 1303,
+      "exported_sha256": "f35dfa26992c962dd16739a3783f731c1a3cc89c0b09b9e61652e63c9b6d450f",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "tests/survivors-research-provider-clock.test.mjs",
+      "sha256": "d4ab8179cff62376aaff70abb9d05915640769e7c486db2ae6b321d9e4f03e91",
+      "bytes": 15038,
+      "exported_sha256": "d4ab8179cff62376aaff70abb9d05915640769e7c486db2ae6b321d9e4f03e91",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "tests/survivors-research-r148-web.test.mjs",
+      "sha256": "48208c86c3dec5ac39b616ed1cb8dcbacc81a3c4e9fef450579e60b835c85168",
+      "bytes": 3492,
+      "exported_sha256": "48208c86c3dec5ac39b616ed1cb8dcbacc81a3c4e9fef450579e60b835c85168",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "tests/survivors-research-r162-prompt-contract.test.mjs",
+      "sha256": "4df78b108c36bf8ea1b592c8264d33026b8569d337558a37914b2615a2a60e71",
+      "bytes": 6294,
+      "exported_sha256": "4df78b108c36bf8ea1b592c8264d33026b8569d337558a37914b2615a2a60e71",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "tests/survivors-research-r165-prompt-contract.test.mjs",
+      "sha256": "ea58cb9b013e200304450357e476ddf122b7fa04bbf505b555765fe28c5b036e",
+      "bytes": 6256,
+      "exported_sha256": "ea58cb9b013e200304450357e476ddf122b7fa04bbf505b555765fe28c5b036e",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "tests/survivors-research-report.test.mjs",
+      "sha256": "d31e04ba08c876de8f65c4bce405b045c05b3ee29c7a4a0ab6dbc7f2e9e91ae9",
+      "bytes": 16352,
+      "exported_sha256": "d31e04ba08c876de8f65c4bce405b045c05b3ee29c7a4a0ab6dbc7f2e9e91ae9",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "tests/survivors-research-sim.test.mjs",
+      "sha256": "aa139f66853acd327e7c797d36cc46731be6480684d5e061d38c03e0bd937e40",
+      "bytes": 99928,
+      "exported_sha256": "aa139f66853acd327e7c797d36cc46731be6480684d5e061d38c03e0bd937e40",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "tests/survivors-research-strategy-layer.test.mjs",
+      "sha256": "6d3c7025c33ff18c25963caedf578641f475eb2109b1ed9bbed29a4de5225ac2",
+      "bytes": 12124,
+      "exported_sha256": "6d3c7025c33ff18c25963caedf578641f475eb2109b1ed9bbed29a4de5225ac2",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "tests/survivors-research-tactics.test.mjs",
+      "sha256": "bbaf05bbf1eba0fde6b8bc75c1ceda16a88e5a983637c6f97346e5eef76f6de8",
+      "bytes": 3019,
+      "exported_sha256": "bbaf05bbf1eba0fde6b8bc75c1ceda16a88e5a983637c6f97346e5eef76f6de8",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "tests/survivors-research-whole-path-guidance.test.mjs",
+      "sha256": "8228c6600921a7374911f2fd0eeb621b4cad7cbf609991f00192d82bd605b70c",
+      "bytes": 3036,
+      "exported_sha256": "8228c6600921a7374911f2fd0eeb621b4cad7cbf609991f00192d82bd605b70c",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "tests/survivors-research-whole-path-transport.test.mjs",
+      "sha256": "028eaf61f7b59e076ad72a2f7bde1a8ceb0fe01ca47bfd50c194b39f896e8cf4",
+      "bytes": 3648,
+      "exported_sha256": "028eaf61f7b59e076ad72a2f7bde1a8ceb0fe01ca47bfd50c194b39f896e8cf4",
+      "modifiedForStandalone": false
+    },
+    {
+      "path": "tests/survivors-research-whole-path.test.mjs",
+      "sha256": "da64a69abe5f5b2c756e39b36a31098cc6be568083551ddb15da7e7f7fc20971",
+      "bytes": 2647,
+      "exported_sha256": "da64a69abe5f5b2c756e39b36a31098cc6be568083551ddb15da7e7f7fc20971",
+      "modifiedForStandalone": false
+    }
+  ],
+  "originalHostIntegrationTestsNotImported": [
+    "survivors-research-sequence-model.test.mjs",
+    "survivors-research-path-only-route.test.mjs",
+    "survivors-research-local-micro.test.mjs",
+    "survivors-research-slots-model.test.mjs",
+    "survivors-research-visual-model.test.mjs",
+    "survivors-research-joint-generated.test.mjs",
+    "survivors-research-fine-model.test.mjs",
+    "survivors-research-plan-history-route.test.mjs",
+    "survivors-research-strategy-route.test.mjs",
+    "survivors-research-cardinal-model.test.mjs",
+    "survivors-research-model.test.mjs"
+  ],
+  "packagesObserved": [
+    "@fix-webm-duration/fix"
+  ],
+  "standaloneAdaptations": [
+    "public/survivors-research.html: independent navigation and no platform/font dependency",
+    "public/survivors-research.css: remove host poster reference",
+    "src/server/api.js: account-free local adapter with bounded IO and rate limit",
+    "src/server/model-settings.js: explicitly reject account-backed credential resolution",
+    "scripts/build.mjs, scripts/start.mjs, scripts/server.mjs: independent build and loopback service"
+  ]
+}

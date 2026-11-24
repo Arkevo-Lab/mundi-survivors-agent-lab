@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>Survivors Agent Lab · R165 三层研究</title>
+  <link rel="icon" href="/favicon.svg">
+  <link rel="stylesheet" href="/dropdown.css">
+  <link rel="stylesheet" href="/survivors-research.css">
+</head>
+<body>
+  <header class="top">
+    <a class="wordmark" href="/">Survivors Agent Lab</a>
+    <nav aria-label="项目导航"><a href="https://github.com/Arkevo-Lab/mundi-survivors-agent-lab" target="_blank" rel="noreferrer">代码与启动说明</a></nav>
+  </header>
+  <main>
+    <header class="intro">
+      <div>
+        <p class="subtitle">吸血鬼幸存者</p>
+        <h1>实时 Agent 研究</h1>
+        <p>活到一分钟结束，并尽可能多捡经验水晶。击杀怪物可能掉落水晶。</p>
+      </div>
+      <div class="session"><span id="visibility">页面前台</span><span id="phase" role="status">待开始</span></div>
+    </header>
+    <section class="inspection" id="simple-results" hidden aria-labelledby="simple-results-title">
+        <div class="section-head"><h2 id="simple-results-title">测试结果</h2></div>
+        <div class="visual-results">
+          <table><thead><tr><th>模型</th><th>信息量</th><th>经验水晶（得分）</th><th>受击次数</th><th>存活</th><th>结局</th><th>游戏帧</th><th>决策 / 秒</th></tr></thead>
+          <tbody id="simple-results-body"></tbody></table>
+          <p class="hint">每拾取 1 颗经验水晶计 1 分。受击只计实际掉血。决策频率按游戏时间计算，只计实际生效的动作。</p>
+          <p id="comparison-pressure-note" class="hint" hidden>这些对局的怪物密度不同，分数请分开比较。</p>
+          <p id="comparison-actions-note" class="hint" hidden>这些对局的可选动作档位不同，分数请分开比较。</p>
+          <p id="comparison-feedback-note" class="hint" hidden>这些对局使用不同的动作反馈，分数请分开比较。</p>
+          <p id="comparison-clock-note" class="hint" hidden>这些对局的线路校准条件不同，决策频率请分开比较。</p>
+        </div>
+    </section>
+    <div class="workspace">
+      <section class="stage" aria-label="实时游戏">
+        <div class="stage-header">
+          <strong id="scene-title">研究画面</strong>
+          <span id="version">0.61.0 派生 · 研究规则 v1</span>
+        </div>
+        <div class="view">
+          <canvas id="game" tabindex="-1" width="960" height="540" aria-label="研究对局快照"></canvas>
+          <div id="human-upgrades" class="human-upgrades" role="dialog" aria-labelledby="human-upgrade-title" tabindex="-1" hidden>
+            <strong id="human-upgrade-title">游戏已暂停 · 选择升级</strong>
+            <p id="human-upgrade-status" class="hint" role="status"></p>
+            <div id="human-upgrade-options"></div>
+          </div>
+          <div id="stage-overlay">开始实验后显示实时画面</div>
+        </div>
+        <dl class="stats">
+          <div><dt>模拟帧</dt><dd id="tick">—</dd></div>
+          <div id="live-clock"><dt>原墙钟 / 游戏墙钟 / 模拟</dt><dd id="clock">—</dd></div>
+          <div><dt>生命</dt><dd id="hp">—</dd></div>
+          <div><dt>受击次数</dt><dd id="hits-taken">—</dd></div>
+          <div><dt>等级</dt><dd id="score">—</dd></div>
+          <div><dt>经验水晶</dt><dd id="gems-collected">—</dd></div>
+          <div><dt id="live-rate-label">决策 Hz（原墙钟 / 游戏墙钟）</dt><dd id="rate">—</dd></div>
+          <div id="live-failures"><dt>失败尝试</dt><dd id="failures">—</dd></div>
+        </dl>
+        <div class="movement" id="live-movement"><strong>当前动作</strong> <span id="movement">—</span></div>
+        <div class="movement" id="plan-row" hidden>
+          <strong>决策计划</strong> <span id="action-plan"></span>
+          <p id="plan-progress" class="hint"></p>
+          <p id="plan-executed" class="hint"></p>
+          <p id="plan-note" class="hint"></p>
+        </div>
+        <div class="movement" id="control-diagnostics" hidden>
+          <strong>微操层</strong> <span id="control-status"></span>
+          <p id="control-counts" class="hint"></p>
+        </div>
+        <div class="movement" id="strategy-diagnostics" hidden>
+          <strong>战略层</strong> <span id="strategy-status" role="status"></span>
+          <p id="strategy-stage" class="hint" hidden></p>
+          <p id="strategy-policy" hidden></p>
+          <p id="strategy-transition" class="hint" hidden></p>
+          <p id="strategy-signals" class="hint" hidden></p>
+        </div>
+        <div class="movement" id="advisor-diagnostics" hidden>
+          <strong>方向层</strong> <span id="advisor-status"></span>
+        </div>
+        <p id="plan-error" class="movement" role="status" hidden></p>
+        <div class="movement" id="offer-row" hidden><strong>待选升级</strong> <span id="offer"></span></div>
+        <div class="movement" id="reward-row" hidden><strong>宝箱奖励</strong> <span id="reward"></span></div>
+      </section>
+      <aside aria-label="实验控制">
+        <form id="experiment">
+          <h2>对局配置</h2>
+          <div id="local-key-panel" class="local-key-panel" hidden>
+            <label id="research-key-label">OpenAI API Key<input id="research-key" type="password" autocomplete="off" spellcheck="false" maxlength="256" placeholder="粘贴 API Key"></label>
+            <button type="button" id="load-key-models">读取模型列表</button>
+            <p class="hint" id="local-key-status" role="status">读取列表后再选择模型。</p>
+          </div>
+          <fieldset id="simple-configuration">
+            <p class="hint" id="playtest-scenarios">
+              <a id="ordinary-scenario" href="/survivors-research.html">常规试玩</a> ·
+              <a id="bands-scenario" href="/survivors-research.html?scenario=bat-crystal-bands-v1">蝙蝠与水晶横带</a>
+            </p>
+            <p class="hint" id="scenario-description" hidden></p>
+            <label id="playtest-model-row">模型<select id="model"><option value="" disabled selected>选择模型</option><option value="generation">GPT‑5.4 mini · Chat 模式</option><option value="openai-decisions">GPT‑6 Luna · 决策模式</option></select></label>
+            <label>环境信息量<select id="information-level" aria-describedby="information-description"></select></label>
+            <p class="hint" id="information-description" role="status"></p>
+            <div id="playtest-action-row" hidden>
+              <label>决策方式<select id="playtest-action-profile">
+                <option value="hold-sequence-v1">组合移动 · 自选短步</option>
+                <option value="hold-slots-v1">时间槽实验 · 500 ms</option>
+                <option value="whole-path-v1" disabled>64 路径 · 300 ms</option>
+                <option value="whole-path-8x2-v1" disabled>64 路径 · 8 方向 × 2 段</option>
+                <option value="whole-path-50-50-200-v1" disabled>64 路径 · 50 / 50 / 200 ms</option>
+              </select></label>
+            </div>
+            <div id="playtest-strategy-row" hidden>
+              <label>移动策略<select id="playtest-strategy" aria-describedby="playtest-rules" autocomplete="off">
+                <option value="latest-local-micro" selected>最新方案（局部微操）</option>
+                <option value="strategy-on">三层对照（全景微操）</option>
+                <option value="advisor-on">两层对照（方向层＋微操层）</option>
+                <option value="recommended">历史方案（第 17 轮）</option>
+                <option value="initial">初始对照</option>
+                <option value="direction">方向实验 · 避怪、找水晶、选动作</option>
+                <option value="micro-control">微操层对照</option>
+              </select></label>
+            </div>
+            <div id="playtest-micro-model-row" hidden>
+              <label>微操模型<select id="playtest-micro-model" autocomplete="off">
+                <option value="" selected>GPT‑6 Luna · 默认 5 项</option>
+                <option value="gpt-6-luna">GPT‑6 Luna · 65 项</option>
+                <option value="drex-max-v1.1" disabled>Nace Drex Max v1.1 · 65 项</option>
+              </select></label>
+              <p class="hint" id="playtest-provider-clock-hint" hidden>每笔请求最多按 300 ms 的模型处理时间推进游戏。超过部分以及网络和框架等待均暂停补偿。</p>
+            </div>
+            <div id="playtest-near-view-row" hidden>
+              <label class="vision-confirm"><input type="checkbox" id="playtest-near-view" aria-describedby="playtest-near-view-hint"> 使用近场结构图</label>
+              <p class="hint" id="playtest-near-view-hint">以玩家为中心，显示左右各 8、上下各 4.5 个世界单位。近处放大，远处会被裁掉。</p>
+            </div>
+            <p class="hint" id="playtest-rules"></p>
+            <p class="hint" id="movement-scale" hidden></p>
+            <div id="movement-feedback-row" hidden>
+              <label>动作反馈<select id="movement-feedback" aria-describedby="movement-feedback-hint">
+                <option value="none">关闭 · 沿用信息档</option>
+                <option value="receipts">附实际位移数据</option>
+                <option value="trajectory">文字和轨迹 PNG · 实际位移记录</option>
+              </select></label>
+              <p class="hint" id="movement-feedback-hint" role="status"></p>
+            </div>
+            <details id="custom-information">
+              <summary>高级配置</summary>
+              <label>结构化数据精度<select id="custom-observation"><option value="state-compact-v1">精简</option><option value="state-detail-v1">详细</option><option value="state-full-v1">全量</option></select></label>
+              <label>画面<select id="custom-visual"><option value="none-v1">无图</option><option value="structured-v1">结构图</option><option value="schematic-v1">示意图</option><option value="full-v1">近原版画面</option></select></label>
+              <div class="information-fields" id="custom-fields" aria-label="发送给模型的信息"></div>
+              <label>配置名称<input type="text" id="custom-name" maxlength="32" placeholder="我的配置"></label>
+              <button type="button" id="save-information">保存并使用</button>
+              <p class="hint" id="custom-status" role="status"></p>
+            </details>
+          </fieldset>
+          <div class="connection" id="connection-panel"><span id="connection" role="status">检查模型连接…</span><a id="connect-model" href="https://github.com/Arkevo-Lab/mundi-survivors-agent-lab#快速启动" target="_blank" rel="noopener">本地模型配置说明</a><button type="button" id="probe" class="text-button">刷新</button></div>
+          <div class="buttons">
+            <button class="primary" id="start" type="submit" disabled>开始测试</button>
+            <button id="stop" type="button" hidden disabled>停止</button>
+          </div>
+          <p class="hint" id="run-cost">开始测试会使用所选模型的 API 额度。</p>
+          <div id="human-play" class="human-play" hidden>
+            <button type="button" id="start-human">自己打一局并录制</button>
+            <p class="hint">用方向键或 WASD 移动。升级时游戏暂停，按数字键或点击选项继续。</p>
+            <p id="human-recording-status" class="hint" role="status" hidden></p>
+            <div id="human-downloads" class="buttons" hidden>
+              <button type="button" id="download-human-video" disabled>下载录像</button>
+              <button type="button" id="download-human-replay">下载动作和位移</button>
+            </div>
+          </div>
+          <div id="engineering-controls" hidden>
+            <fieldset id="configuration">
+              <label>决策来源<select id="engineering-model"><option value="mock">延迟 Mock · 固定动作</option><option value="fixed">站立</option><option value="random">随机</option><option value="rule">规则</option><option value="none">无 Agent</option><option value="generation" disabled>GPT‑5.4 mini</option><option value="openai-decisions" disabled>GPT‑6 Luna</option></select></label>
+            <div class="pair">
+              <label>种子<input id="seed" type="number" min="0" max="4294967295" value="11" required></label>
+              <label>时限（秒）<input id="duration" type="number" min="1" max="600" value="120" required></label>
+            </div>
+            <label>角色<select id="character"><option value="antonio">Antonio · 鞭子</option><option value="imelda">Imelda · 魔杖</option><option value="pasqualina">Pasqualina · 符文弹</option><option value="gennaro">Gennaro · 飞刀</option><option value="arca">Arca · 火焰魔杖</option></select></label>
+            <div class="pair">
+              <label>观测<select id="observation-profile"><option value="state-compact-v1">JSON · 精简</option><option value="state-detail-v1">JSON · 详细</option></select></label>
+              <label>动作<select id="action-profile"><option value="hold-v1">定时移动 · 原档位</option><option value="hold-fine-v1">定时移动 · 六档短步</option><option value="hold-sequence-v1">组合移动 · 一轮多步</option><option value="hold-slots-v1">时间槽实验 · 500 ms</option><option value="distance-v1">定距移动</option></select></label>
+            </div>
+            <label>游戏时钟<select id="link-compensation"><option value="0">实时（不补偿）</option><option value="calibrated">实测链路补偿（实验模拟）</option></select></label>
+            <p class="hint">补偿取当前线路与目标线路的热连接中位数之差。每次请求开头暂停，到达预算或请求结束时恢复。</p>
+            <details id="link-calibration">
+              <summary>线路校准</summary>
+              <p class="hint">用 <code>scripts/survivors-research/link-probe.mjs</code> 在两条线路分别采集无凭证 HTTPS 报告，再导入。优先使用同一端点。</p>
+              <label>导入采样报告<input id="link-report-file" type="file" accept=".json,application/json" multiple></label>
+              <label>当前线路<select id="link-current"><option value="">选择当前线路</option></select></label>
+              <label>目标线路<select id="link-target"><option value="">选择目标线路</option></select></label>
+              <label class="vision-confirm"><input type="checkbox" id="link-allow-proxy">允许不同探针作为替代基线（估算）</label>
+              <p id="link-status" class="hint" role="status">请选择当前与目标线路</p>
+            </details>
+            <label>视觉输入<select id="visual-profile"><option value="none-v1">无图 · 仅 JSON</option><option value="structured-v1">结构图 · 几何符号</option><option value="schematic-v1">示意图 · 简化轮廓</option><option value="full-v1">近原版 · 游戏精灵</option></select></label>
+            <p class="hint" id="visual-config-hint">各档都发送所选 JSON 和动作候选。</p>
+            <label class="vision-confirm" id="vision-confirm-row" hidden><input type="checkbox" id="vision-confirm">我已确认所配模型支持图片</label>
+            <div class="pair" id="mock-config">
+              <label>Mock 等待<select id="delay"><option value="0">0 ms</option><option value="50">50 ms</option><option value="200" selected>200 ms</option><option value="500">500 ms</option><option value="2000">2,000 ms</option></select></label>
+              <label>Mock 故障<select id="failure"><option value="none">无</option><option value="timeout">超时</option><option value="malformed">格式错误</option><option value="invalid">非法动作</option><option value="disconnect">断连</option></select></label>
+            </div>
+            </fieldset>
+          <button id="batch" class="wide" type="button">运行站立、随机、规则基线</button>
+          <button id="batch-selected" class="wide" type="button">按同组种子运行所选来源</button>
+          <button id="compare-visual" class="wide" type="button">按当前种子对照四档视觉</button>
+          <label class="vision-confirm"><input type="checkbox" id="sample-adjusted">单次响应同时显示按校准预算扣减的估算</label>
+          <button id="sample-responses" class="wide" type="button" disabled>测量 OpenAI 单次响应</button>
+          <p class="hint">复用第 0 帧，两个端点分别测无图与结构图。每档先探路，全部成功后补到 5 次。最多 20 次 API 调用，可能产生用量。</p>
+          <section id="response-sample" hidden aria-label="单次响应结果">
+            <p id="sample-status" role="status"></p>
+            <pre id="sample-summary"></pre>
+            <button id="export-sample" type="button" disabled>下载采样 JSON</button>
+          </section>
+          <button id="compare-models" class="wide" type="button" disabled>按当前输入对照两个 OpenAI 后端</button>
+          <p class="hint" id="compare-models-note">每个后端一局，使用同一设置。模型和端点同时变化，结果用于对照两套配置。</p>
+          <button id="benchmark-visual" class="wide" type="button">对照四档数据生成开销</button>
+          <p class="hint">使用固定动作和 0 ms Mock。仍保留 250 ms 采样间隔，阶段耗时反映实际处理，应用频率受节拍限制。</p>
+          <label>基线批次种子<input id="batch-seeds" type="text" value="11, 23, 37, 51, 71" inputmode="numeric" maxlength="130"></label>
+          <p class="hint" id="batch-hint">依次运行三种基线，每种使用同一组种子与所填时限。</p>
+          </div>
+        </form>
+        <section class="artifacts" aria-labelledby="evidence-title">
+          <h2 id="evidence-title">实验记录</h2>
+          <div class="buttons">
+            <button id="export" type="button" disabled>导出实验包</button>
+            <button id="import" type="button">导入回放或节点</button>
+            <input id="import-file" type="file" accept=".json,application/json" hidden>
+          </div>
+          <label>已保存运行<select id="history"><option value="">选择历史对局</option></select></label>
+          <label id="replay-source-row" hidden>回放对局<select id="replay-source"></select></label>
+          <div class="buttons">
+            <button id="replay" type="button" disabled>验证回放</button>
+            <button id="replay-play" type="button" disabled>播放轨迹</button>
+          </div>
+          <label id="replay-range-row" hidden>回放帧<input id="replay-range" type="range" min="0" max="0" value="0"></label>
+          <div id="resume-node-controls">
+            <label>已保存测试节点<select id="saved-node"><option value="">选择测试节点</option></select></label>
+            <p id="node-summary" class="hint" hidden></p>
+            <div class="buttons">
+              <button id="save-node" type="button" disabled>保存为测试节点</button>
+              <button id="start-node" type="button" disabled>从这里测试 10 秒</button>
+              <button id="export-node" type="button" disabled>导出节点</button>
+            </div>
+            <p class="hint">在历史对局的回放中选一个时间，或导入已保存的节点。开始续测会使用当前模型的 API 额度。</p>
+          </div>
+          <p id="branch-summary" class="hint" role="status" hidden></p>
+          <p id="evidence-status" class="hint" role="status">数据保存在此浏览器。</p>
+        </section>
+      </aside>
+      <section class="visual-panel" id="visual-panel" hidden aria-labelledby="visual-title">
+        <div class="section-head"><h2 id="visual-title">同帧输入对照</h2><span class="hint" id="visual-example-tick">合成样例 · tick 1890</span></div>
+        <div class="visual-grid">
+          <figure><div class="visual-tile no-image"><strong>仅 JSON</strong><span>无图像附件</span></div><figcaption>无图 <small>观察与候选的 JSON</small></figcaption></figure>
+          <figure><img class="visual-tile" id="visual-structured-v1" alt="几何结构图"><figcaption>结构图 <small>位置、范围、资源与移动</small></figcaption></figure>
+          <figure><img class="visual-tile" id="visual-schematic-v1" alt="简化轮廓图"><figcaption>示意图 <small>简化场景与敌人轮廓</small></figcaption></figure>
+          <figure><img class="visual-tile" id="visual-full-v1" alt="游戏精灵画面"><figcaption>近原版画面 <small>0.61.0 精灵、地表和 HUD</small></figcaption></figure>
+        </div>
+        <p class="visual-note hint">三张图以同一视野及 HUD 渲染。近原版复用游戏精灵与动画，HUD 为重绘。实际输入显示在下方。</p>
+      </section>
+      <details class="inspection" id="inspection-details">
+        <summary id="inspection-title">运行明细</summary>
+        <div class="section-head"><h2>决策证据</h2><span id="quality">有效决策帧率待校准</span></div>
+        <dl class="stats compact">
+          <div><dt>观测 / 生效帧</dt><dd id="decision-ticks">—</dd></div>
+          <div><dt>请求（原始 / 折算）</dt><dd id="latency">—</dd></div>
+          <div><dt>观测年龄（原始 / 扣实际暂停）</dt><dd id="age">—</dd></div>
+          <div><dt>实际暂停（本轮 / 累计）</dt><dd id="clock-pause">—</dd></div>
+          <div><dt>实际生效次数</dt><dd id="decisions">—</dd></div>
+        </dl>
+        <div id="visual-evidence" class="visual-live" hidden>
+          <img id="visual-image" alt="最近一轮记录的图像输入">
+          <div><strong>本轮图像输入</strong><p id="visual-meta" class="hint"></p><p id="visual-transfer" class="hint"></p></div>
+        </div>
+        <div id="visual-results" class="visual-results" hidden>
+          <table>
+            <caption>对局结果</caption>
+            <thead><tr><th>模型 / 端点</th><th>视觉档</th><th>时钟模式</th><th>种子</th><th>帧</th><th>HP</th><th>经验水晶</th><th>应用</th><th>Hz 原始 / 游戏</th><th>累计暂停 ms</th><th>字节 p50</th><th>渲染 p50 ms</th><th>编码 p50 ms</th><th>请求 p50 ms 原始 / 折算</th><th>观测年龄 p50 ms 原始 / 扣暂停</th><th>采集失败</th><th>环境与证据</th></tr></thead>
+            <tbody id="visual-results-body"></tbody>
+          </table>
+        </div>
+        <details id="timing-summary" class="timing-summary" hidden>
+          <summary>分阶段耗时与缓存</summary>
+          <p class="hint payload-status">每格为样本数 / p50 / p95 / 最大值。耗时单位 ms。空值代表未测或该阶段未执行。阶段总耗时已包含其子阶段。</p>
+          <div class="visual-results" id="timing-table"></div>
+        </details>
+        <div class="payloads">
+          <details><summary>模型输入记录</summary><p id="input-dispatch" class="hint payload-status">等待首次决策</p><pre id="input">等待首次决策</pre></details>
+          <details id="decision-answer" hidden><summary>Decisions 选择与概率</summary><pre id="decision-answer-body"></pre></details>
+          <details><summary>最近一次返回</summary><pre id="output">等待首次决策</pre></details>
+          <details><summary>最近一轮分阶段打点</summary><pre id="decision-timing">等待首次决策</pre></details>
+          <details><summary>完整调试快照</summary><pre id="snapshot">等待游戏快照</pre></details>
+          <details><summary>运行结果与批次</summary><pre id="report">等待对局完成</pre></details>
+        </div>
+      </details>
+    </div>
+    <p class="provenance">独立 R165 研究快照 · 程序绘制场景 · 仅使用本项目配置的模型连接</p>
+  </main>
+  <script type="module" nonce="__ARKENA_NONCE__" src="/survivors-research.js"></script>
+</body>
+</html>
